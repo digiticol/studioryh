@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio R&H - Diseño y Desarrollo Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="pages.js" defer></script>
+    <!-- Favicom -->
+
+    <link rel="icon" href="files/images/favicom.png">
+</head>
+<body>
+
+    <!-- Header con logo y menú -->
+    <header>
+        <div class="header">
+            <div class="navbar">
+                <div class="container-logo">
+                    <a href="index.html"><img class="logo" src="files/images/logo-r&h.png" alt="AndiWeb"></a>
+                </div>
+                <div class="navbar-menu">
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="index.html#servicios">Nuestros Servicios</a></li>
+                            <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+                            <li><a href="index.html#proyectos">Nuestros Proyectos</a></li>
+                            <li><a href="index.html#contacto">Contáctanos</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-icons">
+                        <input type="checkbox" id="side-menu" class="side-menu" />
+                <label for="side-menu" class="hamb" id="hamb">
+                    <img src="icon/bars-solid.svg" class="menu-icon" id="menu-icon" onclick="menutoggle()">
+                    <img src="icon/xmark-solid.svg" class="menu-icon-x" id="menu-icon-x" onclick="menutoggle()">
+                </label>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </header>
+
+    <!--Contacto por WhatsApp-->
+
+    <div class="nav-bottom">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+   rel="stylesheet">
+         <div class="popup-whatsapp fadeIn">
+             <div class="content-whatsapp -top"><button type="button" class="closePopup">
+                   <i class="material-icons icon-font-color">close</i>
+                 </button> 
+               
+                <p>  <img style="border-radius: 50px;" src="files/images/icon-studioryh-whatsapp.png" width="50">  Hola, ¿en que podemos ayudarte? </p>
+                
+             </div>
+             <div class="content-whatsapp -bottom">
+               <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+                
+                
+               
+       
+                 <button class="send-msPopup" id="send-btn" type="button">
+                     <i class="material-icons icon-font-color--black">send</i>
+                 </button>
+
+             </div>
+         </div>
+         <button type="button" id="whats-openPopup" class="whatsapp-button">
+             <div class="float" >
+                <i class="fa-brands fa-whatsapp my-float"></i></div>
+         </button>
+         <div class="circle-anime"></div>
+     </div>
+
+    <header>
+        <h1>Diseño y Desarrollo Web</h1>
+    </header>
+
+    <div class="content">
+        <p style="text-align: justify">Explora la innovación digital en nuestra página de Diseño y Desarrollo Web en Studio R&H. Desde webs básicas hasta tiendas virtuales, cada proyecto es un testimonio de nuestra habilidad para transformar ideas en experiencias digitales impactantes. Con un enfoque centrado en el usuario, implementamos tecnologías de vanguardia y un diseño cautivador para potenciar la presencia en línea de nuestros clientes. Descubre cómo elevamos marcas a nuevos horizontes, creando sitios web que no solo impresionan sino que también funcionan. En Studio R&H, tu visión cobra vida en cada clic.</p>
+    </div>
+
+    <main class="content">
+        <!-- Grids de artículos -->
+        <section class="grid-container">
+            <article class="grid-item">
+                <img src="files/images/diseno-y-desarrollo-web/diseno-y-desarrollo-web-arttricolor.png" alt="Art Tricolor">
+                <p class="meta"><b>Cliente:</b> Art Tricolor</p>
+                <a target="_blank" href="https://artworldartistico.wixsite.com/artes"><button class="btn-cta">Ver Sitio Web</button></a>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-y-desarrollo-web/diseno-y-desarrollo-web-limpiamar.png" alt="Limpiamar MC">
+                <p class="meta"><b>Cliente:</b> Limpiamar MC</p>
+                <a target="_blank" href="https://www.limpiamarmc.com.co/"><button class="btn-cta">Ver Sitio Web</button></a>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-y-desarrollo-web/diseno-y-desarrollo-web-mioficina.png" alt="Mi Oficina.co">
+                <p class="meta"><b>Cliente:</b> Mi Oficina.co</p>
+                <a target="_blank" href="https://mioficina.co/"><button class="btn-cta">Ver Sitio Web</button></a>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-y-desarrollo-web/diseno-y-desarrollo-web-r2publicidad.png" alt="R2 Publicidad">
+                <p class="meta"><b>Cliente:</b> R2 Publicidad</p>
+                <a target="_blank" href="https://andisystem.github.io/users-data/r2publicidad/"><button class="btn-cta">Ver Sitio Web</button></a>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-y-desarrollo-web/diseno-y-desarrollo-web-univercity.png" alt="UniverCity">
+                <p class="meta"><b>Cliente:</b> UniverCity</p>
+                <a target="_blank" href="https://www.univercity.com.co/demo/univercity/"><button class="btn-cta">Ver Sitio Web</button></a>
+            </article>
+            <!-- Aquí puedes añadir más artículos -->
+        </section>
+
+        <!-- Sidebar en la derecha -->
+        <aside class="sidebar">
+            
+            <div class="recent-articles">
+                <h3>Proyectos Relacionados</h3>
+                <ul>
+                    <li><a href="identidad-de-marca.html">Identidad de Marca</a></li>
+                    <li><a href="diseno-publicitario.html">Diseño Publicitario</a></li>
+                </ul>
+            </div>
+
+            <div class="categories">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="diseno-de-logotipos.html">Diseño de Logotipos</a></li>
+                </ul>
+            </div>
+
+            <div class="share-social">
+                <h3>Compártenos en Redes Sociales</h3>
+                <!-- Iconos de redes sociales -->
+                 <!-- AddToAny BEGIN -->
+                Comparte este artículo en tus redes sociales:
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_linkedin"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_whatsapp"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+            </div>
+
+            <section class="services-section">
+                <h3>Ofrecemos</h3>
+                <ul class="star-list">
+                    <li>E-commerce</li>
+                    <li>E-learning</li>
+                    <li>Web básica Informativa</li>
+                    <li>Web Corporativa</li>
+                    <li>Landing Page</li>
+                    <li>Desarrollo a la Medida</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <!-- Sección de comentarios y formulario -->
+    <section class="comments-section">
+        <h2>Deja tu comentario</h2>
+        <form id="comment-form">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="ciudad" placeholder="Ciudad" required>
+            <input type="text" name="pais" placeholder="País" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Modal de imagen -->
+    <div class="modal" id="modal">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <img src="" alt="Imagen ampliada" id="modalImage">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Studio R&H - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

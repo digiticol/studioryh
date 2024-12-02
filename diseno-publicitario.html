@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio R&H - Diseño Publicitario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="pages.js" defer></script>
+    <!-- Favicom -->
+
+    <link rel="icon" href="files/images/favicom.png">
+</head>
+<body>
+
+    <!-- Header con logo y menú -->
+    <header>
+        <div class="header">
+            <div class="navbar">
+                <div class="container-logo">
+                    <a href="index.html"><img class="logo" src="files/images/logo-r&h.png" alt="AndiWeb"></a>
+                </div>
+                <div class="navbar-menu">
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="index.html#servicios">Nuestros Servicios</a></li>
+                            <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+                            <li><a href="index.html#proyectos">Nuestros Proyectos</a></li>
+                            <li><a href="index.html#contacto">Contáctanos</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-icons">
+                        <input type="checkbox" id="side-menu" class="side-menu" />
+                <label for="side-menu" class="hamb" id="hamb">
+                    <img src="icon/bars-solid.svg" class="menu-icon" id="menu-icon" onclick="menutoggle()">
+                    <img src="icon/xmark-solid.svg" class="menu-icon-x" id="menu-icon-x" onclick="menutoggle()">
+                </label>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </header>
+
+    <!--Contacto por WhatsApp-->
+
+    <div class="nav-bottom">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+   rel="stylesheet">
+         <div class="popup-whatsapp fadeIn">
+             <div class="content-whatsapp -top"><button type="button" class="closePopup">
+                   <i class="material-icons icon-font-color">close</i>
+                 </button> 
+               
+                <p>  <img style="border-radius: 50px;" src="files/images/icon-studioryh-whatsapp.png" width="50">  Hola, ¿en que podemos ayudarte? </p>
+                
+             </div>
+             <div class="content-whatsapp -bottom">
+               <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+                
+                
+               
+       
+                 <button class="send-msPopup" id="send-btn" type="button">
+                     <i class="material-icons icon-font-color--black">send</i>
+                 </button>
+
+             </div>
+         </div>
+         <button type="button" id="whats-openPopup" class="whatsapp-button">
+             <div class="float" >
+                <i class="fa-brands fa-whatsapp my-float"></i></div>
+         </button>
+         <div class="circle-anime"></div>
+     </div>
+
+    <header>
+        <h1>Diseño Publicitario</h1>
+    </header>
+
+    <div class="content">
+        <p style="text-align: justify">Explora el poder de la creatividad publicitaria en nuestra página de Diseño Publicitario en Studio R&H. Desde material impreso hasta campañas digitales, cada proyecto es una manifestación de nuestra pasión por transmitir mensajes impactantes. Nuestra habilidad para fusionar diseño atractivo con estrategias publicitarias efectivas se refleja en cada pieza. Descubre cómo en Studio R&H transformamos ideas en campañas visuales que no solo comunican, sino que también conectan. Potencia tu presencia publicitaria con nosotros.</p>
+    </div>
+
+    <main class="content">
+        <!-- Grids de artículos -->
+        <section class="grid-container">
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-agenda-mioficina.png" alt="Agenda Mi Oficina.co">
+                <h2>Agenda</h2>
+                <p class="meta"><b>Cliente:</b> Mi Oficina.co</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-agenda-mioficina-2.png" alt="Agenda Mi Oficina.co">
+                <h2>Agenda</h2>
+                <p class="meta"><b>Cliente:</b> Mi Oficina.co</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-agenda-mioficina-3.png" alt="Agenda Mi Oficina.co">
+                <h2>Agenda</h2>
+                <p class="meta"><b>Cliente:</b> Mi Oficina.co</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-merchandisign-mo.jpeg" alt="Brochure y Tarjeta de Presentación Mi Oficina.co">
+                <h2>Brochure y Tarjeta de Presentación</h2>
+                <p class="meta"><b>Cliente:</b> Mi Oficina.co</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-pendon-mioficina.png" alt="Pendón Mi Oficina.co">
+                <h2>Pendón</h2>
+                <p class="meta"><b>Cliente:</b> Mi Oficina.co</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-andisystem.png" alt="Identidad de Marca Merchandisign Andi System">
+                <h2>Identidad de Marca Merchandisign</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-esferos-andi-system.png" alt="Souvenir Bolígrafos Andi System">
+                <h2>Souvenir Bolígrafos</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-brochure-andisystem.png" alt="Brochure Andi System">
+                <h2>Brochure</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-key-chain-andisystem.png" alt="Souvenir Llavero Andi System">
+                <h2>Souvenir Llavero</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-merchandisign-andisystem.png" alt="Souvenir Andi System">
+                <h2>Souvenir</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-pendrive-andisystem.png" alt="Souvenir Pendrive Andi System">
+                <h2>Souvenir Pendrive</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-van-car-frontal-andisystem.png" alt="Van Corporativo Andi System">
+                <h2>Van Corporativo</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-van-car-lateral-andisystem.png" alt="Van Corporativo Andi System">
+                <h2>Van Corporativo</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-van-car-lateral2-andisystem.png" alt="Van Corporativo Andi System">
+                <h2>Van Corporativo</h2>
+                <p class="meta"><b>Cliente:</b> Andi System</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-boleta-bambata-eco.png" alt="Boleta Bambata Eco">
+                <h2>Boleta</h2>
+                <p class="meta"><b>Cliente:</b> Bambata Eco</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-flyer-bambata-eco.png" alt="Flyer Bambata Eco">
+                <h2>Flyer</h2>
+                <p class="meta"><b>Cliente:</b> Bambata Eco</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-pendon-roll-up-bambata-eco.png" alt="Pendón Roll Up Bambata Eco">
+                <h2>Pendón Roll Up</h2>
+                <p class="meta"><b>Cliente:</b> Bambata Eco</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-exhibidor-supremacy.jpeg" alt="Exhibidor Supremacy">
+                <h2>Exhibidor</h2>
+                <p class="meta"><b>Cliente:</b> Supremacy</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-supremacy.png" alt="Publicidad Supremacy">
+                <h2>Publicidad</h2>
+                <p class="meta"><b>Cliente:</b> Supremacy</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-meicys.jpeg" alt="Post RRSS Meicys">
+                <h2>Post RRSS</h2>
+                <p class="meta"><b>Cliente:</b> Meicys</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-membrete-el-balcon.png" alt="Membrete El Balcón">
+                <h2>Membrete</h2>
+                <p class="meta"><b>Cliente:</b> El Balcón</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-tarjeta-de-presentacion-dulces-eventos.png" alt="Diseño de Tarjeta de Presentación Dulces Eventos">
+                <h2>Diseño de Tarjeta de Presentación</h2>
+                <p class="meta"><b>Cliente:</b> Dulces Eventos</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/tarjetas-de-presentacion-vilecafe.png" alt="Diseño de Tarjeta de Presentación Vilecafe">
+                <h2>Diseño de Tarjeta de Presentación</h2>
+                <p class="meta"><b>Cliente:</b> Vilecafe</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-tarjeta-de-presentacion.png" alt="Diseño de Tarjeta de Presentación Bionatural">
+                <h2>Diseño de Tarjeta de Presentación</h2>
+                <p class="meta"><b>Cliente:</b> Bionatural</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-volante-curso-de-ajedrez.png" alt="Diseño de Volante Curso de Ajedrez Kallpa">
+                <h2>Diseño de Volante Curso de Ajedrez</h2>
+                <p class="meta"><b>Cliente:</b> Kallpa</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-volante-restaurante-la-casona.png" alt="Diseño de Volante Restaurante la Casona el Greco">
+                <h2>Diseño de Volante</h2>
+                <p class="meta"><b>Cliente:</b> Restaurante la Casona el Greco</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-kores.png" alt="Diseño de Góndolas Kores Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Kores Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-kores-2.png" alt="Diseño de Góndolas Kores Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Kores Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-kores-3.png" alt="Diseño de Góndolas Kores Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Kores Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-kores-4.png" alt="Diseño de Góndolas Kores Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Kores Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-kores-5.png" alt="Diseño de Góndolas Kores Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Kores Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-kores-6.png" alt="Diseño de Góndolas Kores Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Kores Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-maped-1.png" alt="Diseño de Góndolas Maped Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Maped Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-maped-2.png" alt="Diseño de Góndolas Maped Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Maped Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-maped-3.png" alt="Diseño de Góndolas Maped Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Maped Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-maped-4.png" alt="Diseño de Góndolas Maped Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Maped Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-maped-5.png" alt="Diseño de Góndolas Maped Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Maped Colombia</p>
+            </article>
+            <article class="grid-item">
+                <img src="files/images/diseno-publicitario/gondolas-maped-6.png" alt="Diseño de Góndolas Maped Colombia">
+                <h2>Diseño de Góndolas</h2>
+                <p class="meta"><b>Cliente:</b> Maped Colombia</p>
+            </article>
+            <!-- Aquí puedes añadir más artículos -->
+        </section>
+
+        <!-- Sidebar en la derecha -->
+        <aside class="sidebar">
+            
+            <div class="recent-articles">
+                <h3>Proyectos Relacionados</h3>
+                <ul>
+                    <li><a href="diseno-y-desarrollo-web.html">Diseño y Desarrollo Web</a></li>
+                    <li><a href="diseno-de-logotipos.html">Diseño de Logotipos</a></li>
+                    <li><a href="identidad-de-marca.html">Diseño Publicitario</a></li>
+                </ul>
+            </div>
+
+            <div class="share-social">
+                <h3>Compártenos en Redes Sociales</h3>
+                <!-- Iconos de redes sociales -->
+                 <!-- AddToAny BEGIN -->
+                Comparte este artículo en tus redes sociales:
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_linkedin"></a>
+                <a class="a2a_button_email"></a>
+                <a class="a2a_button_whatsapp"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+            </div>
+
+            <section class="services-section">
+                <h3>Ofrecemos</h3>
+                <ul class="star-list">
+                    <li>Diseño para Medios Impresos</li>
+                    <li>Diseño Digital</li>
+                    <li>Packaging</li>
+                    <li>Diseño 3D</li>
+                    <li>Señalización</li>
+                    <li>Animación y Motion Graphics</li>
+                    <li>Diseño UI/UX</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <!-- Sección de comentarios y formulario -->
+    <section class="comments-section">
+        <h2>Deja tu comentario</h2>
+        <form id="comment-form">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="ciudad" placeholder="Ciudad" required>
+            <input type="text" name="pais" placeholder="País" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Modal de imagen -->
+    <div class="modal" id="modal">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <img src="" alt="Imagen ampliada" id="modalImage">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Studio R&H - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
