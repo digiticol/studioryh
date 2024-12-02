@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio R&H - Diseño y Marketing Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+   
+    <!-- Favicom -->
+
+    <link rel="icon" href="files/images/favicom.png">
+</head>
+<body>
+    <!-- Header con logo y menú -->
+    <header>
+        <div class="header">
+            <div class="navbar">
+                <div class="container-logo">
+                    <a href=""><img class="logo" src="files/images/logo-r&h.png" alt="AndiWeb"></a>
+                </div>
+                <div class="navbar-menu">
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#servicios">Nuestros Servicios</a></li>
+                            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                            <li><a href="#proyectos">Nuestros Proyectos</a></li>
+                            <li><a href="#contacto">Contáctanos</a></li>
+                        </ul>
+                    </nav>
+                    <div class="main-icons">
+                        <input type="checkbox" id="side-menu" class="side-menu" />
+                <label for="side-menu" class="hamb" id="hamb">
+                    <img src="icon/bars-solid.svg" class="menu-icon" id="menu-icon" onclick="menutoggle()">
+                    <img src="icon/xmark-solid.svg" class="menu-icon-x" id="menu-icon-x" onclick="menutoggle()">
+                </label>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </header>
+
+    <!--Contacto por WhatsApp-->
+
+    <div class="nav-bottom">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+   rel="stylesheet">
+         <div class="popup-whatsapp fadeIn">
+             <div class="content-whatsapp -top"><button type="button" class="closePopup">
+                   <i class="material-icons icon-font-color">close</i>
+                 </button> 
+               
+                <p>  <img style="border-radius: 50px;" src="files/images/icon-studioryh-whatsapp.png" width="50">  Hola, ¿en que podemos ayudarte? </p>
+                
+             </div>
+             <div class="content-whatsapp -bottom">
+               <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+                
+                
+               
+       
+                 <button class="send-msPopup" id="send-btn" type="button">
+                     <i class="material-icons icon-font-color--black">send</i>
+                 </button>
+
+             </div>
+         </div>
+         <button type="button" id="whats-openPopup" class="whatsapp-button">
+             <div class="float" >
+                <i class="fa-brands fa-whatsapp my-float"></i></div>
+         </button>
+         <div class="circle-anime"></div>
+     </div>
+
+    <!-- Sección Inicio con video de fondo -->
+    <!--<section id="inicio" class="banner">
+        <div class="banner-content">
+            <h1>Hola, Somos Digiticol</h1>
+            <h2>Tecnología, Estrategia y Conciencia en acción</h2>
+            <p>Somos una agencia de diseño, marketing y tecnología que ofrece consultoría y asesoría personalizada, brindando soluciones creativas y tecnológicas a la vanguardia para tu negocio.</p>
+        </div>
+    </section>-->
+
+    <header class="hero" id="inicio">
+        <div class="container container-cta">
+            <div class="container-col banner-content">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">IMPULSA TU<br /><span>MARCA ONLINE</span></h2>
+				<p class="text-hero" data-aos="fade-up" data-aos-duration="1500">Impulsamos el crecimiento de tu marca con estrategias digitales a medida,
+                    diseñadas para conectar y potenciar tu visión.</p>
+                <div class="buttons">
+                    <a href="#servicios"><button class="btn-services" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Nuestros servicios</button></a>
+                    <button class="btn-webform" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Conoce nuestra metodología</button>
+                </div>
+            </div>
+            <div class="container-col" id="container-col">
+                <div id="scene" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">
+                    <img class="img" data-depth="0.2" src="files/images/Social-Media-PNG-Transparent.png" alt="">
+                    <img class="img" data-depth="0.9" src="files/images/cms-platform.png" alt="">
+                </div>
+            </div>
+            <a class="arrow-up" href="#"><i class="fas fa-arrow-up"></i></a>
+        </div>
+        <div class="container container-webform" id="container-webform">
+            <div class="container-col">
+                <div class="controller" data-aos="fade-right" data-aos-duration="2500">
+                    <div class="parallax-section">
+                        <p>Impulsando el éxito digital desde el corazón de tu marca.</p>
+                        <div class="container-metody" id="metody">
+                            <nav class="main">
+                                <ul class="ul-metody">
+                                    <li class="list">
+                                        <div class="div toggle-container">
+                                            <div class="link-content"><i class="fas fa-pen-nib"></i>¿Qué hacemos?</div><i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="content">
+                                            <p>Diseñamos y ejecutamos estrategias de marketing digital y desarrollo web a medida, enfocadas en posicionar y fortalecer la presencia de tu marca para alcanzar tus objetivos de negocio en el entorno digital.</p>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="div toggle-container">
+                                            <div class="link-content"><i class="fas fa-solid fa-chart-simple"></i>¿Cómo lo hacemos?</div><i class="fas fa-chevron-down"></i>
+                                        </div>
+                                        <div class="content">
+                                            <p>Analizamos las necesidades de tu marca, creamos planes estratégicos y utilizamos las herramientas digitales más avanzadas para conectar con tu audiencia, potenciando cada aspecto de tu marca de forma innovadora y efectiva.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-col" id="container-col">
+                <div id="scene2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">
+                    <img class="img" data-depth="0.2" src="files/images/Social-Media-PNG-Transparent.png" alt="">
+                    <img class="img" data-depth="0.9" src="files/images/cms-platform.png" alt="">
+                </div>
+                <div class="buttons">
+                    <p><a name="nuestros-servicios"></a></p>
+                    <a href="#servicios"><button class="btn-services" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Nuestros servicios</button></a>
+                    <button class="btn-cta" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Nuestros Servicios -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="files/images/diseno-de-paginas-web.png" alt="Diseño de páginas web">
+                <h3>Diseño de páginas web</h3>
+                <p>Ofrecemos servicios de diseño y desarrollo web para crear sitios atractivos, funcionales y adaptados a las necesidades de cada marca. Nos enfocamos en la experiencia del usuario, el diseño responsivo y la optimización para potenciar tu presencia en línea.</p>
+            </div>
+            <div class="grid-item">
+                <img src="files/images/redes-sociales.png" alt="Redes sociales">
+                <h3>Redes sociales</h3>
+                <p>Ofrecemos servicios completos de estrategia y gestión de redes sociales para ayudar a tu marca a conectar con su audiencia, aumentar su visibilidad y fortalecer su presencia digital.</p>
+            </div>
+            <div class="grid-item">
+                <img src="files/images/pauta-digital.png" alt="Pauta digital">
+                <h3>Pauta digital</h3>
+                <p>Gestionamos campañas de pauta digital personalizadas para maximizar el alcance de tu marca. Utilizamos estrategias efectivas en plataformas como Google Ads, Facebook, Instagram y más, para atraer a tu audiencia ideal y generar resultados medibles.</p>
+            </div>
+            <div class="grid-item">
+                <img src="files/images/diseno-grafico.png" alt="Diseño gráfico">
+                <h3>Diseño gráfico</h3>
+                <p>Ofrecemos soluciones creativas de diseño gráfico para reforzar la identidad de tu marca. Desde logotipos hasta material para redes sociales y publicidad, transformamos tus ideas en diseños impactantes y profesionales.</p>
+            </div>
+            <div class="grid-item">
+                <img src="files/images/estrategia-digital.png" alt="Estrategia digital">
+                <h3>Estrategia digital</h3>
+                <p>Diseñamos y ejecutamos estrategias personalizadas para redes sociales, gestión de contenido, posicionamiento SEO y publicidad en línea , asegurando una presencia digital sólida y efectiva.</p>
+            </div>
+            <div class="grid-item">
+                <img src="files/images/produccion-audiovisual.png" alt="Producción audiovisual">
+                <h3>Producción audiovisual</h3>
+                <p>Realizamos sesiones de fotografía, video, animaciones 2D y 3D para crear contenido de alta calidad para redes sociales, catálogos y páginas web.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes Somos con parallax -->
+    <section class="quienes-somos" id="quienes-somos">
+        <div class="contenido" id="container-col">
+            <div id="read-more" class="contenido-expandido">
+                <p>En este espacio te compartiremos quiénes somos y cómo podemos contribuir al éxito de tu marca. Te ofrecemos soluciones especializadas en marketing digital, posicionamiento y desarrollo web, con el objetivo de definir, junto a ti, las estrategias que mejor se adapten a tus metas y promuevan el crecimiento de tu negocio.</p>
+                <ul class="star-list">
+                    <li>Consultoría y asesoría personalizada para identificar y satisfacer tus necesidades.</li>
+                    <li>Diseño gráfico y multimedia que captura y refleja la esencia de tu marca.</li>
+                    <li>Desarrollo de sitios web UI/UX y adaptable en diferentes dispositivos.</li>
+                    <li>Estrategias de branding que te diferencian y conectan emocionalmente con tu audiencia.</li>
+                    <li>Marketing digital que potencia tu crecimiento y visibilidad en el mercado.</li>
+                </ul>
+                <p class="cta">¡<strong>Comencemos a trabajar juntos hoy mismo y descubre lo que podemos lograr juntos!</strong></p>
+            </div>
+
+            <button class="btn-cta" id="see-more">Ver más <i class="fa-solid fa-plus"></i></button>
+        </div>
+    
+        <div class="contenido" id="scene3">
+            <img class="img" data-depth="1.8" src="https://img.freepik.com/vector-premium/campana-estrategia-marketing-digital_18660-3175.jpg" alt="">
+        </div>
+    </section>    
+
+    <!-- Sección Nuestro Equipo -->
+    <section class="nuestro-equipo">
+        <h2>NUESTRO EQUIPO DE TRABAJO</h2>
+        
+        <div class="equipo-grid">
+            <!-- Grid 1: Jheraldin Huertas -->
+            <div class="equipo-miembro">
+                <img src="files/images/jheraldin-huertas.png" alt="Jheraldin Huertas">
+                <h3>Jheraldin Huertas Zapata</h3>
+                <h4>Líder de estrategia digital y comercial</h4>
+                <div class="social-icons">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=573162597578&amp;text=Buen%20día%20Jheraldin," class="social-icon" data-aos="fade-up"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/jheral.huertas" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jheraldin-huertas-zapata-2121b41a2/" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/jheralhuertas/" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    
+            <!-- Grid 2: Andrés Rodríguez -->
+            <div class="equipo-miembro">
+                <img src="files/images/andres_rodriguez.png" alt="Andrés Rodríguez">
+                <h3>Andrés Felipe Rodríguez Barbosa</h3>
+                <h4>Líder de proyectos y operativo</h4>
+                <div class="social-icons">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=573213900071&amp;text=Buen%20día%20Andrés," class="social-icon" data-aos="fade-up"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a target="_blank" href="https://web.facebook.com/people/Andr%C3%A9s-Rodr%C3%ADguez/100008156191939/" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/andr%C3%A9s-felipe-rodr%C3%ADguez-barbosa-53b4a915a/" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/andres_rb1991/" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.behance.net/anfelirod8b973" class="social-icon" data-aos="fade-up"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Sección Nuestros Proyectos -->
+    <section class="nuestros-proyectos" id="proyectos">
+        <h2>Conoce nuestros proyectos</h2>
+        
+        <div class="proyectos-grid">
+            <a href="identidad-de-marca.html"><div class="proyecto-item">
+                <img src="files/images/identidad-de-marca/identidad-de-marca-andisystem-4.png" alt="Identidad de Marca">
+                <h3>Identidad de Marca</h3>
+            </div></a>
+
+            <a href="diseno-publicitario.html"><div class="proyecto-item">
+                <img src="files/images/diseno-publicitario/diseno-publicitario-supremacy.png" alt="Diseño Publicitario">
+                <h3>Diseño Publicitario</h3>
+            </div></a>
+
+            <a href="diseno-de-logotipos.html"><div class="proyecto-item">
+                <img src="files/images/diseno-de-logotipos/logo-anfitrion.jpeg" alt="Diseño de Logotipos">
+                <h3>Diseño de Logotipos</h3>
+            </div></a>
+
+            <a href="diseno-y-desarrollo-web.html"><div class="proyecto-item">
+                <img src="https://www.sgstechnologies.net/sites/default/files/2021-08/future-webdesign.jpg" alt="Diseño y Desarrollo Web">
+                <h3>Diseño y Desarrollo Web</h3>
+            </div></a>
+        </div>
+    </section>    
+
+    <!-- Sección de Clientes con efecto hover -->
+    <section class="clientes">
+        <h1>Confían en nosotros</h1>
+        <div class="clientes-logos">
+            <img src="files/images/nuestros-clientes/logo-grupo-koneko.png" alt="Grupo Koneko">
+            <img src="https://static.wixstatic.com/media/ad82ef_51caddfd26284877a57df03d7b2da7f5~mv2.png/v1/crop/x_68,y_128,w_362,h_174/fill/w_500,h_240,al_c,lg_1,q_85,enc_auto/Logo%20House%20Koneko%20(4).png" alt="House Koneko">
+            <img src="files/images/nuestros-clientes/logo-dulce-magia.png" alt="Dulce Mágia">
+            <img src="files/images/nuestros-clientes/logo-petroworks.png" alt="Petroworks">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbgA8uwnnqSNxIACW75eEKUP5RmKk0XfPg9A&s" alt="Limpiamar MC">
+            <img src="files/images/nuestros-clientes/logo-arttricolor.png" alt="Art Tricolor">
+            <img src="files/images/nuestros-clientes/logo-camcomputo.png" alt="CamCómputo">
+            <img src="files/images/nuestros-clientes/logo-dulces-eventos.png" alt="Dulces Eventos">
+            <img src="files/images/nuestros-clientes/logo-kallpa-club-de-ajedrez.png" alt="Kallpa">
+            <img src="files/images/nuestros-clientes/logo-peluditos-sesquile.png" alt="Peluditos Sesquilé">
+            <img src="files/images/nuestros-clientes/logo-alma-bonita.png" alt="Alma Bonita">
+            <img src="files/images/nuestros-clientes/logo-krysalida.png" alt="Krysalida">
+            <img src="files/images/nuestros-clientes/logo-krysalida.png" alt="Esencia Dorada">
+            <img src="files/images/nuestros-clientes/logo-digiticol.png" alt="Digiticol">
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="parallax-section">
+        <h2>Cuéntanos sobre tu proyecto</h2>
+        <form id="contact-form">
+            <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+            <input type="tel" name="telefono" placeholder="+57 Número de Contacto" required>
+            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="text" name="pais" placeholder="País" required>
+            <input type="text" name="ciudad" placeholder="Ciudad" required>
+            <textarea name="mensaje" placeholder="Mensaje"></textarea>
+            <button class="btn-cta" type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Studio R&H - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="a</html>nonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+</body>
+</html>
