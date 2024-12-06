@@ -539,7 +539,15 @@ input.whats-input[type=text]:focus {
 }
 
 /* Estilos para dispositivos móviles en orientación horizontal (landscape) */
-@media only screen and (max-width: 600px) and (orientation: landscape) {
+@media only screen and (max-width: 780px) and (orientation: landscape) {
+    .hero{
+        height: 700px;
+    }
+
+    .hero .container .container-col h2{
+        font-size: 35px;
+    }
+
     .navbar nav ul {
         position: absolute;
         top: 100%;
@@ -578,8 +586,12 @@ input.whats-input[type=text]:focus {
     #box-search{
         max-height: 150px; /* Altura máxima para que funcione el scroll */
     }
-}
 
+    /*Quiénes somos*/
+    #read-more {
+        max-height: 160px;
+    }
+}
 /* Footer */
 footer {
     background: #222;
