@@ -35,6 +35,11 @@ document.querySelectorAll('.navbar-menu a').forEach(anchor => {
             top: targetPosition,
             behavior: 'smooth'
         });
+
+        // Cierra el menú después del clic
+        MenuItems.style.maxHeight = "0px";
+        menuHamb.classList.remove('active');
+        menuClose.classList.remove('active');
     });
 });
 
@@ -102,14 +107,26 @@ popupWhatsApp = () => {
     let btnOpenPopup = document.querySelector('.whatsapp-button');
     let popup = document.querySelector('.popup-whatsapp');
     let sendBtn = document.getElementById('send-btn');
+
+    // Recuperar el estado guardado en localStorage
+    let isPopupActive = localStorage.getItem('isPopupActive') === 'true';
+
+    // Establecer el estado inicial del popup
+    if (isPopupActive) {
+        popup.classList.add('is-active-whatsapp-popup');
+    } else {
+        popup.classList.remove('is-active-whatsapp-popup');
+    }
   
     btnClosePopup.addEventListener("click",  () => {
-      popup.classList.toggle('is-active-whatsapp-popup')
+      popup.classList.toggle('is-active-whatsapp-popup');
+      localStorage.setItem('isPopupActive', 'false'); // Guardar estado cerrado
     })
     
     btnOpenPopup.addEventListener("click",  () => {
-      popup.classList.toggle('is-active-whatsapp-popup')
-       popup.style.animation = "fadeIn .6s 0.0s both";
+      popup.classList.toggle('is-active-whatsapp-popup');
+      popup.style.animation = "fadeIn .6s 0.0s both";
+      localStorage.setItem('isPopupActive', 'true'); // Guardar estado abierto
     })
     
     sendBtn.addEventListener("click", () => {
