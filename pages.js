@@ -53,15 +53,42 @@ popupWhatsApp = () => {
     let btnOpenPopup = document.querySelector('.whatsapp-button');
     let popup = document.querySelector('.popup-whatsapp');
     let sendBtn = document.getElementById('send-btn');
+
+    // Recuperar el estado guardado en localStorage
+    let isPopupActive = localStorage.getItem('isPopupActive') === 'true';
+    let hasSeenPopup = localStorage.getItem('hasSeenPopup') === 'true';
+
+    // Establecer el estado inicial del popup
+    if (isPopupActive) {
+        popup.classList.add('is-active-whatsapp-popup');
+    } else {
+        popup.classList.remove('is-active-whatsapp-popup');
+    }
+
+    // Mostrar el popup automáticamente después de 3 segundos, solo si no se ha visto antes
+    if (!hasSeenPopup) {
+        setTimeout(() => {
+            popup.classList.add('is-active-whatsapp-popup');
+            localStorage.setItem('isPopupActive', 'true'); // Guardar estado abierto
+            localStorage.setItem('hasSeenPopup', 'true'); // Marcar que ya se mostró una vez
+        }, 3000);
+    }
   
     btnClosePopup.addEventListener("click",  () => {
-      popup.classList.toggle('is-active-whatsapp-popup')
+      popup.classList.toggle('is-active-whatsapp-popup');
+      localStorage.setItem('isPopupActive', 'false'); // Guardar estado cerrado
     })
     
     btnOpenPopup.addEventListener("click",  () => {
-      popup.classList.toggle('is-active-whatsapp-popup')
-       popup.style.animation = "fadeIn .6s 0.0s both";
-    })
+      popup.classList.toggle('is-active-whatsapp-popup');
+      popup.style.animation = "fadeIn .6s 0.0s both";
+      // Guardar estado abierto/cerrado
+      if (popup.classList.contains('is-active-whatsapp-popup')) {
+        localStorage.setItem('isPopupActive', 'true');
+        } else {
+            localStorage.setItem('isPopupActive', 'false');
+        }
+    });
     
     sendBtn.addEventListener("click", () => {
     let msg = document.getElementById('whats-in').value;
