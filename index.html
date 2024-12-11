@@ -291,17 +291,39 @@
     </section>
 
     <!-- Sección de Contacto -->
-    <section id="contacto" class="parallax-section">
-        <h2>Cuéntanos sobre tu proyecto</h2>
-        <form id="contact-form">
-            <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
-            <input type="tel" name="telefono" placeholder="+57 Número de Contacto" required>
-            <input type="email" name="email" placeholder="Correo Electrónico" required>
-            <input type="text" name="pais" placeholder="País" required>
-            <input type="text" name="ciudad" placeholder="Ciudad" required>
-            <textarea name="mensaje" placeholder="Mensaje"></textarea>
-            <button class="btn-cta" type="submit">Enviar</button>
-        </form>
+    <!-- Sección de Contacto -->
+    <section class="section-form" id="contacto">
+        <div id="formUser">
+            <form class="form" id="form">
+                <h1 class="title-contact">Cuéntanos sobre tu proyecto</h1>
+                <div class="container-form">
+                    <div class="input-container">
+                        <i class="fa-solid fa-user icon"></i><span>|</span>
+                        <input class="input-form" type="text" aria-required="true" required="required" name="name" id="name" placeholder="Nombre y Apellido">
+                    </div>
+                    <div class="input-container">
+                        <i class="fa-solid fa-mobile-screen-button icon"></i><span>|</span>
+                        <input class="input-form" type="number" inputmode="numeric" min="1000000000" max="9999999999" aria-required="true" required="required" name="tel" id="tel" placeholder="+57 Número de Contacto">
+                    </div>
+                    <div class="input-container">
+                        <i class="fas fa-envelope icon"></i><span>|</span>
+                        <input class="input-form" type="text" aria-required="true" required="required" name="email" id="email" placeholder="Correo Electrónico">
+                    </div>
+                    <div class="input-container">
+                        <i class="fa-solid fa-location-dot icon"></i><span>|</span>
+                        <input class="input-form" type="text" aria-required="true" required="required" name="country" id="country" placeholder="País">
+                    </div>
+                    <div class="input-container">
+                        <i class="fa-solid fa-city icon"></i><span>|</span>
+                        <input class="input-form" type="text" aria-required="true" required="required" name="city" id="city" placeholder="Ciudad">
+                    </div>
+                    <div class="input-container">
+                        <textarea class="input-form textarea" name="message" id="message" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" id="submit" class="button">
+                </div>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
