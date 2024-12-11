@@ -145,7 +145,8 @@ popupWhatsApp = () => {
   popupWhatsApp();
 
 // Contact WebForm
-document.getElementById('form').addEventListener('submit', function(event) {
+// Contact WebForm
+  document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const btn = document.getElementById('submit');
@@ -177,7 +178,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
     }
 
     // Enviar datos a Google Sheets
-    fetch('https://script.google.com/macros/s/AKfycbwxMwBIQaBhmMuhZUKkiTZhowym1gorA9wWA4w4lFWAFaqJLonOhB9iTWtdJJjKVP8LiA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzhboGuZGRMdsGedrRTwSEoCXXtdOwBqyPNepdfvxIomnBnexC-Hz1rTmtpYP85BgJFnA/exec', {
         method: 'POST',
         body: new URLSearchParams(data),
     })
