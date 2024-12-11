@@ -145,111 +145,98 @@ popupWhatsApp = () => {
   popupWhatsApp();
 
 // Contact WebForm
-  const btn = document.getElementById('submit');
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-            document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault();
+    const btn = document.getElementById('submit');
+    btn.value = 'Enviando...';
 
-            btn.value = 'Enviando...';
+    const serviceID = 'default_service';
+    const templateID = 'template_akil7zs';
 
-            const serviceID = 'default_service';
-            const templateID = 'template_akil7zs';
+    // Obtener los datos del formulario
+    const formData = new FormData(event.target);
 
-            // Obtener los datos del formulario
-            const name = document.querySelector("#name").value;
-            const phone = document.querySelector("#tel").value;
-            const email = document.querySelector("#email").value;
-            const country = document.querySelector("#country").value;
-            const city = document.querySelector("#city").value;
-            const message = document.querySelector("#message").value;
+    const data = {
+        name: formData.get('name'),
+        phone: formData.get('tel'),
+        email: formData.get('email'),
+        country: formData.get('country'),
+        city: formData.get('city'),
+        message: formData.get('message'),
+    };
 
-            // Validar el correo del usuario
-            if (!email || !email.includes('@')) {
-                console.error("Correo del usuario inválido");
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Correo electrónico inválido'
-                });
-                return;
+    // Validar correo
+    if (!data.email || !data.email.includes('@')) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Correo electrónico inválido'
+        });
+        btn.value = 'Enviar';
+        return;
+    }
+
+    // Enviar datos a Google Sheets
+    fetch('https://script.google.com/macros/s/AKfycbwxMwBIQaBhmMuhZUKkiTZhowym1gorA9wWA4w4lFWAFaqJLonOhB9iTWtdJJjKVP8LiA/exec', {
+        method: 'POST',
+        body: new URLSearchParams(data),
+    })
+        .then(response => response.json())
+        .then(result => {
+            if (result.result === 'success') {
+                console.log('Datos enviados a Google Sheets');
+            } else {
+                console.error('Error al enviar a Google Sheets:', result.error);
             }
+        })
+        .catch(error => {
+            console.error('Error de conexión con Google Sheets:', error);
+        });
 
-            // URL del script de Google Apps Script
-            const scriptURL = "https://script.google.com/macros/s/AKfycbwxMwBIQaBhmMuhZUKkiTZhowym1gorA9wWA4w4lFWAFaqJLonOhB9iTWtdJJjKVP8LiA/exec";
+    // Configurar EmailJS
+    emailjs.init("R7M8QI3tnuua0oFF1");
 
-            // Datos a enviar
-            const formData = {
-                name,
-                phone,
-                email,
-                country,
-                city,
-                message,
-            };
+    const paramsNotification = {
+        to_email: "huertasrodriguezgroup@gmail.com",
+        to_name: "Studio R&H",
+        from_email: data.email,
+        from_name: data.name,
+        subject: "Nuevo mensaje enviado desde la página web Studio R&H",
+        message: `Nombre: ${data.name}\nTeléfono: ${data.phone}\nCorreo: ${data.email}\nPaís: ${data.country}\nCiudad: ${data.city}\nMensaje: ${data.message}`
+    };
 
-            // Enviar datos a Google Sheets
-            fetch(scriptURL, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            })
-                .then((response) => {
-                    if (response.ok) {
-                        console.log("Datos enviados a Google Sheets");
-                    } else {
-                        throw new Error("Error al enviar a Google Sheets");
-                    }
-                })
-                .catch((error) => console.error("Error:", error));
+    const paramsConfirmation = {
+        to_email: data.email,
+        to_name: data.name,
+        from_email: "huertasrodriguezgroup@gmail.com",
+        from_name: "Studio R&H",
+        subject: "Confirmación de contacto",
+        message: "Gracias por contactarnos. Hemos recibido su mensaje y nos pondremos en contacto con usted pronto."
+    };
 
+    emailjs.send(serviceID, templateID, paramsNotification)
+        .then(function(response) {
+            console.log("Correo al corporativo enviado", response);
 
-            // Configurar EmailJS
-            emailjs.init("R7M8QI3tnuua0oFF1");
-
-            // Construir los parámetros para el correo corporativo
-            const paramsNotification = {
-                to_email: "huertasrodriguezgroup@gmail.com",
-                to_name: "Studio R&H",
-                from_email: email,
-                from_name: name,
-                subject: "Nuevo mensaje enviado desde la página web Studio R&H",
-                message: `Nombre: ${name}\nTeléfono: ${phone}\nCorreo: ${email}\nPaís: ${country}\nCiudad: ${city}\nMensaje: ${message}`
-            };
-
-            // Construir los parámetros para el correo de confirmación
-            const paramsConfirmation = {
-                to_email: email,
-                to_name: name,
-                from_email: "huertasrodriguezgroup@gmail.com",
-                from_name: "Studio R&H",
-                subject: "Confirmación de contacto",
-                message: "Gracias por contactarnos. Hemos recibido su mensaje y nos pondremos en contacto con usted pronto."
-            };
-
-            // Enviar correo al corporativo
-            emailjs.send(serviceID, templateID, paramsNotification)
-                .then(function(response) {
-                    console.log("Correo al corporativo enviado", response);
-
-                    // Enviar correo de confirmación al usuario
-                    return emailjs.send(serviceID, templateID, paramsConfirmation);
-                })
-                .then(function(response) {
-                    console.log("Correo de confirmación enviado", response);
-                    btn.value = 'Enviar';
-                    Swal.fire({
-                        icon: 'success',
-                        title: '¡Mensaje enviado exitosamente!',
-                        html: 'Por favor revise su correo electrónico con mensaje de confirmación',
-                    });
-                })
-                .catch(function(error) {
-                    console.error("Error al enviar los correos", error);
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error al enviar los datos al correo electrónico'
-                    });
-                });
-        }, false);
+            return emailjs.send(serviceID, templateID, paramsConfirmation);
+        })
+        .then(function(response) {
+            console.log("Correo de confirmación enviado", response);
+            btn.value = 'Enviar';
+            Swal.fire({
+                icon: 'success',
+                title: '¡Mensaje enviado exitosamente!',
+                html: 'Por favor revise su correo electrónico con mensaje de confirmación',
+            });
+        })
+        .catch(function(error) {
+            console.error("Error al enviar los correos", error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error al enviar los datos al correo electrónico'
+            });
+        });
+});
 
 //Validar número de teléfono
 document.getElementById('tel').addEventListener('input', function (e) {
